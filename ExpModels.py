@@ -3,6 +3,6 @@
 #import visual.graph
 import time # For optimisation and bugtesting purposes
 
-temp_data = set((15, 0), (16, 20), (18, 40), (19, 60), (22, 80), (24, 100), (31, 140), (42, 160), (49, 180), (67, 200), (78, 220) (90, 240), (105, 260), (109, 280), (122, 300), (125, 320))
+temp_data = [15, 16, 18, 19, 22, 24, 31, 42, 49, 67, 78, 90, 105, 109, 122, 125]
 
 print(temp_data)
