@@ -5,11 +5,16 @@ import time # For optimisation and bugtesting purposes
 
 start = time.time()
 
-temp_data = [15, 16, 18, 19, 22, 24, 31, 42, 49, 67, 78, 90, 105, 109, 122, 125]
+temp_data = [15, 16, 18, 19, 22, 24, 24, 31, 42, 49, 67, 78, 90, 105, 109, 122, 125]
 
-for i in range(len(temp_data) - 1):
-    percent_increase = 100 / temp_data[i] * temp_data[i + 1] - 100
-    print(percent_increase)
+def get_projection_factor(list):
+    output = []
+    for i in range(len(list) - 1):
+        projection_factor = 100 / list[i] * list[i + 1] / 100
+        output.append(projection_factor)
+    return output
+
+print(get_projection_factor(temp_data))
 
 end = time.time()
 
