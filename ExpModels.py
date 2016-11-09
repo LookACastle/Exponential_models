@@ -5,7 +5,7 @@ import time # For optimisation and bugtesting purposes
 
 start = time.time()
 
-temp_data = [15, 16, 18, 19, 22, 24, 24, 31, 42, 49, 67, 78, 90, 105, 109, 122, 125]
+temp_data = [15, 16, 18, 19, 22, 24, 31, 42, 49, 67, 78, 90, 105, 109, 122, 125]
 
 def get_projection_factor(list):
     output = []
