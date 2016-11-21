@@ -1,13 +1,7 @@
-# -*- coding: utf-8 -*-
+GlowScript 2.2 VPython
 from __future__ import division, print_function
-import vpython
-import time # For optimisation and bugtesting purposes
-
-start = time.time()
 
 temp_data = [15, 16, 18, 19, 22, 24, 31, 42, 49, 67, 78, 90, 105, 109, 122, 125]
-
-points = vpython.gdots(color = vpython.color.blue)
 
 def get_projection_factor(list):
     output = []
@@ -16,9 +10,12 @@ def get_projection_factor(list):
         output.append(projection_factor)
     return output
 
-for x in range(len(temp_data)):
-    points.plot(x, temp_data[x])
+def graph_func(logarithmic):
+    test = graph(logy = logarithmic.checked, width = 600, height = 600, xmin = 0, ymin = 10)
 
-end = time.time()
+    points = gdots(color = color.blue)
 
-print("it took: ", end - start, "seconds to do this")
+    for x in range(len(temp_data)):
+        points.plot(x, temp_data[x])
+
+checkbox(bind = graph_func, text = "Logarithmic")
