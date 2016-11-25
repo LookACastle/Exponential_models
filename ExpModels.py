@@ -14,7 +14,7 @@ def get_projection_factor(list):
     return output
 
 def graph_func(logarithmic):
-    g = graph(logy = logarithmic.checked, width = 600, height = 600, xmin = 0, ymin = 0)
+    g = graph(logy = logarithmic.checked, width = 600, height = 600, xmin = 0, ymin = 10)
 
     points = gdots(color = color.blue)
 
