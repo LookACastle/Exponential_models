@@ -1,5 +1,4 @@
 GlowScript 2.2 VPython
-
 temp_data = [15, 16, 18, 19, 22, 24, 31, 42, 49, 67, 78, 90, 105, 109, 122, 125]
 
 # Makes the big black box disappear
@@ -23,3 +22,10 @@ def graph_func(logarithmic):
 
 
 checkbox(bind = graph_func, text = "Logarithmic toggle")
+
+g = graph(logy = False, width = 600, height = 600, xmin = 0, ymin = 10)
+
+points = gdots(color = color.blue)
+
+for x in range(len(temp_data)):
+    points.plot(x, temp_data[x])
